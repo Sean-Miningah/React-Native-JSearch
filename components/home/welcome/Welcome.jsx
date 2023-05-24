@@ -18,7 +18,7 @@ const Welcome = () => {
   return (
     <View>
       <View style={styles.container}>
-        <Text style={styles.userName}>Hello Adrian</Text>
+        <Text style={styles.userName}>Hello ...</Text>
         <Text style={styles.welcomeMessage}>Find you perfect job</Text>
       </View>
 
@@ -54,7 +54,7 @@ const Welcome = () => {
               style={styles.tab(activeJobType, item)}
               onPress={() => {
                 setActiveJobType(item);
-                router.push(`/serach/${item}`)
+                router.push(`/search/${item}`)
               }}
             >
               <Text style={styles.tabText(activeJobType, item)}>{item}</Text>
