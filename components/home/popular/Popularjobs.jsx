@@ -1,17 +1,22 @@
 import { useState } from 'react'
 import { View, Text, TouchableOpacity, Flatlist, ActivityIndicator } from 'react-native'
 import { useRouter } from 'expo-router'
+import { FlatList } from 'react-native-gesture-handler';
 
 import styles from './popularjobs.style'
 import { COLORS, SIZES } from '../../../constants';
 import PopularJobCard from '../../common/cards/popular/PopularJobCard';
-import { FlatList } from 'react-native-gesture-handler';
-
+import { useFetch } from '../../../hook/useFetch';
 
 const Popularjobs = () => {
   const router = useRouter();
-  const isLoading = false; 
-  const error = false;
+  const { data, isLoading, error } = useFetch(
+    'search', {
+      query: 'React developer',
+      num_pages: 1
+    }
+  )
+
 
 
   return (
@@ -36,13 +41,13 @@ const Popularjobs = () => {
           <Text>Somethin went wrong</Text>
         ): (
           <FlatList 
-            data={[1, 2, 3, 4]}
+            data={data}
             renderItem={({ item }) => (
               <PopularJobCard
                 item={item}
               />
             )}
-            keyExtractor={item => item?.job_id}
+            keyExtractor={(item) => item.job_id}
             contentContainerStyle={{ columnGap: SIZES.medium }}
             horizontal
             showsHorizontalScrollIndicator={false}
