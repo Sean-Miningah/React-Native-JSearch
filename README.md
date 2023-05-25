@@ -1,18 +1,14 @@
-# Expo Router Example
+# JOB HUNTER
 
-Use [`expo-router`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.
+This project is a job search application. 
+The application is build using __React Native__ and __Expo__ .
 
-## 🚀 How to use
+Data being displayed on the app is sourced from JSearch api from RapidAPI.
 
-```sh
-npx create-react-native-app -t with-router
-```
+To use the application scan the code below on you Expo Go application for android or open the following link on you device 
+- exp://exp.host/@254sean/jobs?release-channel=default
 
-## 📝 Notes
+For Iphone you will be required to download the code and run it on you Mac OS device. 
 
-- [Expo Router: Docs](https://expo.github.io/router)
-- [Expo Router: Repo](https://github.com/expo/router)
-- [Request for Comments](https://github.com/expo/router/discussions/1)
+![Alt Text](ReadMe-Image/Expo-QR-code.png)
 
-
-## this tutorial code is courtesy of the [Tutorial](https://www.youtube.com/watch?v=mJ3bGvy0WAY)
